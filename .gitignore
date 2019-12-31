@@ -1,0 +1,2 @@
+# exclude everything in the folder
+src/node_modules/*
