@@ -6,6 +6,7 @@ A reader may only be interested in knowing the steps I have followed for exclusi
 
 ## Tools Used
 Tool | Use
+| ------------- | ------------- |
 SASS/SPSS | Compiling the CSS file
 Web Browsers | Tested on Safari, Microsoft Edge, and Safari
 HTML | Mark-up language
