@@ -1,0 +1,23 @@
+.text-logo {
+    font-size: 5rem;
+    text-align: center;
+
+    &--left {
+        display: inline-block;
+        color: $color-logo-left;
+        animation-name: moveInLeft;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+        font-family: Ubuntu, sans-serif;
+    }
+
+    
+    &--right {
+        display: inline-block;
+        color: $color-logo-right;
+        animation-name: moveInRight;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+        font-family: IBM Plex Mono, sans-serif;
+    }
+}

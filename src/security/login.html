@@ -20,12 +20,13 @@
     <link rel="stylesheet" href="../css/stylesheet.css" th:href="@{/css/main.css}" />
     <link rel="shortcut icon" href="../img/titleIcon.ico" th:href="@{img/titleIcon.ico}"/>
     <title th:text="${title}">FinanceScript 2.0</title>
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|IBM+Plex+Mono|Ubuntu&display=swap" rel="stylesheet">
 </head>
 <!--To be replaced by Thymeleaf-->
 <head th:replace="fragments/info_fg :: metainfo ('Login')">Meta info goes here
 </head>
 <body class="securities">
-<h1>Login page</h1>
+<h1 class="text-logo"><span class="text-logo--left">Finance</span><span class="text-logo--right"><i>script</i></span></h1>
 <!--/*@thymesVar id="member" type="com.financescript.springapp.dto.MemberDto"*/-->
 
 <form th:action="@{/authenticateTheUser}" method="post">

@@ -61,6 +61,29 @@ body {
 .u-margin-top-huge {
   margin-top: 10rem; }
 
+.text-logo {
+  font-size: 5rem;
+  text-align: center; }
+  .text-logo--left {
+    display: inline-block;
+    color: #e19933;
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    font-family: Ubuntu, sans-serif; }
+  .text-logo--right {
+    display: inline-block;
+    color: #0f0f0f;
+    animation-name: moveInRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    font-family: IBM Plex Mono, sans-serif; }
+
+body {
+  padding: 3rem;
+  background-image: radial-gradient(#e7e7e7, #9f9f9f);
+  height: 100vh; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
