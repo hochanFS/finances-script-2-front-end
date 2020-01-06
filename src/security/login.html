@@ -1,31 +1,76 @@
 <!DOCTYPE html>
-<html>
-    <!--This part will be replaced by Thymeleaf-->
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="description" content="Public financial platform for ongoing statistical research" />
-        <meta name="author" content="@hochanFS" />
-        <!-- Hochan Lee's GitHub: https://github.com/hochanFS -->
-        <meta name="keywords" content="Finance, FinanceScript, Machine Learning, Natural Language Processing,
-        Equity Research, Research, Statistics, Quantitative, ESG, Economic Scenario Generator" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/main.css"/>
-        <link rel="shortcut icon" href="img/titleIcon.ico" th:href="@{img/titleIcon.ico}"/>
-        <title>FinanceScript 2.0</title>
-    </head>
-    <body>
-        <section class="section-login_header">
-        <div class="section-login_header__text">
-            <h1 class="">
-                <Span>Welcome to</Span>
-            </h1>
-        </div>
-        </section>
-        <section>
-            <div class="section-login-body">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<script>
+    function upperCaseF(a){
+        setTimeout(function(){
+            a.value = a.value.toUpperCase();
+        }, 1);
+    }
+</script>
+<!--To be replaced by Thymeleaf-->
+<head th:fragment="metainfo (title)">
+    <meta charset="UTF-8" />
+    <meta name="description" content="Public financial platform for ongoing statistical research" />
+    <meta name="author" content="@hochanFS" />
+    <!-- Hochan Lee's GitHub: https://github.com/hochanFS -->
+    <meta name="keywords" content="Finance, FinanceScript, Machine Learning, Natural Language Processing,
+    Equity Research, Research, Statistics, Quantitative, ESG, Economic Scenario Generator" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/stylesheet.css" th:href="@{/css/main.css}" />
+    <link rel="shortcut icon" href="../img/titleIcon.ico" th:href="@{img/titleIcon.ico}"/>
+    <title th:text="${title}">FinanceScript 2.0</title>
+</head>
+<!--To be replaced by Thymeleaf-->
+<head th:replace="fragments/info_fg :: metainfo ('Login')">Meta info goes here
+</head>
+<body class="securities">
+<h1>Login page</h1>
+<!--/*@thymesVar id="member" type="com.financescript.springapp.dto.MemberDto"*/-->
 
+<form th:action="@{/authenticateTheUser}" method="post">
+    <div class="form-group">
+        <label for="username">Username</label>:
+        <input type="text"
+               id="username"
+               name="username"
+               class="form-control"
+               autofocus="autofocus"
+               onkeydown="upperCaseF(this)"
+               placeholder="Username">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>:
+        <input type="password"
+               id="password"
+               name="password"
+               class="form-control"
+               placeholder="Password">
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <input type="submit"
+                       name="login-submit"
+                       id="login-submit"
+                       class="form-control btn btn-info"
+                       value="Log In">
             </div>
-        </section>
-    </body>
+        </div>
+    </div>
+</form>
+<div th:if="${param.error || param.logout}" class="alert">
+    <div th:if="${param.error}">
+        <div class="alert--danger">
+            Invalid username or password.
+        </div>
+    </div>
+    <div th:if="${param.logout}">
+        <div class="alert--info">
+            You have been logged out.
+        </div>
+    </div>
+</div>
+<a th:href="@{/sign-up}" role="button" aria-pressed="true">Join FinanceScript</a>
+</body>
 </html>

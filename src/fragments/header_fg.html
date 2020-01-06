@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div id="header" th:fragment="social_media">
+    <h1><a id="logo" href="#">
+        <img src="../static/img/Logo.png" th:src="@{/img/Logo.png}" alt="FinanceScript" width="100" height="89"/>
+    </a></h1>
+    <!--/*@thymesVar id="sessionUsername" type="java.lang.String"*/-->
+    <h2>
+        <a th:if="${sessionUsername == null}" th:href="@{/login}" role="button" aria-pressed="true">Sign in</a>
+        <div th:unless="${sessionUsername == null}">
+            <span>Hi, <span th:text="${sessionUsername}"></span></span>
+            <form action="/logout" method="POST">
+                <input type="submit" value="Logout" />
+            </form>
+        </div>
+    </h2>
+
+
+</div>
+<nav th:fragment="navigation">
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <ul class="nav-links">
+        <li class = "nav-list"><a href="#" class="nav-choice">About</a></li>
+        <li class = "nav-list"><a href="#" class="nav-choice">Simulations</a></li>
+        <li class = "nav-list"><a href="#" class="nav-choice">Machine Learning</a></li>
+        <li class = "nav-list"><a href="#" class="nav-choice">Equity Research</a></li>
+        <li class = "nav-list"><a href="#" class="nav-choice">Contact Us</a></li>
+    </ul>
+</nav>
+</body>
+</html>
