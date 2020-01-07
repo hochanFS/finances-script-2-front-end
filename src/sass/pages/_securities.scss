@@ -1,19 +1,35 @@
+.strip {
+    height: 1.5vh;
+    background-color: $color-strip;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    margin-bottom: 4.5vh;
+}
+
 body {
-    padding: 3rem;
-    background-image: radial-gradient($color-grey-bg-light, $color-grey-bg-dark);
+    background-image: rgb(240, 240, 240); //radial-gradient($color-grey-bg-light, $color-grey-bg-dark);
     height: 100vh;
 }
 
-.login-form {
-    border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
-    height: auto;
+.security-main {
     position: relative;
-    background-color: inherit;
+}
 
-    &__form {
-        width: 460px;
-        padding: 6rem;
+.login-form {
+    content: "";
+    border-radius: 3px;
+    display: block;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    height: 50vh;
+    position: relative;
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $color-lemon;
+
+    @include respond(tab-port) {
+        width: 90%;
     }
 
     & > * {

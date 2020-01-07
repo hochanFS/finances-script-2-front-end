@@ -23,42 +23,46 @@
     <link href="https://fonts.googleapis.com/css?family=Calistoga|IBM+Plex+Mono|Ubuntu&display=swap" rel="stylesheet">
 </head>
 <!--To be replaced by Thymeleaf-->
-<head th:replace="fragments/info_fg :: metainfo ('Login')">Meta info goes here
+<head th:replace="fragments/info_fg :: metainfo ('Login')">
 </head>
 <body class="securities">
-<h1 class="text-logo"><span class="text-logo--left">Finance</span><span class="text-logo--right"><i>script</i></span></h1>
+<div class="strip"></div>
+<h1 class="text-logo u-margin-bottom-medium"><span class="text-logo--left">Finance</span><span class="text-logo--right"><i>script</i></span></h1>
 <!--/*@thymesVar id="member" type="com.financescript.springapp.dto.MemberDto"*/-->
+<main class="security-main">
 <div class="login-form">
-    <div class="login-form__form">
-<form th:action="@{/authenticateTheUser}" method="post" class="form">
-    <div class="form__group">
-        <label for="username" class="form__label">Username</label>:
-        <input type="text"
-               id="username"
-               name="username"
-               class="form__input"
-               autofocus="autofocus"
-               onkeydown="upperCaseF(this)"
-               placeholder="Username">
+    <div class="form-essence">
+        <form th:action="@{/authenticateTheUser}" method="post" class="form">
+            <div class="form__group">
+                <label for="username" class="form__label">Username</label>
+                    <input type="text"
+                        id="username"
+                        name="username"
+                        class="form__input"
+                        autofocus="autofocus"
+                        onkeydown="upperCaseF(this)"
+                        placeholder="Username">
+            </div>
+            <div class="form__group">
+                <label for="password" class="form__label">Password</label>
+                <input type="password"
+                    id="password"
+                    name="password"
+                    class="form__input"
+                    placeholder="Password">
+            </div>
+            <div class="row">
+                <div class="u-margin-top-medium">
+                    <input type="submit"
+                        name="login-submit"
+                        id="login-submit"
+                        class="btn"
+                        value="Log In">
+                </div>
+            </div>
+        </form>
+        <a th:href="@{/sign-up}" role="button" aria-pressed="true">Join FinanceScript</a>
     </div>
-    <div class="form__group">
-        <label for="password" class="form__label">Password</label>:
-        <input type="password"
-               id="password"
-               name="password"
-               class="form__input"
-               placeholder="Password">
-    </div>
-    <div class="row">
-        <div class="u-margin-top-medium">
-            <input type="submit"
-                   name="login-submit"
-                   id="login-submit"
-                   class="btn"
-                   value="Log In">
-        </div>
-    </div>
-</form>
 </div>
 <div th:if="${param.error || param.logout}" class="alert">
     <div th:if="${param.error}">
@@ -71,8 +75,9 @@
             You have been logged out.
         </div>
     </div>
+
 </div>
-</div>
-<a th:href="@{/sign-up}" role="button" aria-pressed="true">Join FinanceScript</a>
+
+</main>
 </body>
 </html>
