@@ -3,3 +3,21 @@ body {
     background-image: radial-gradient($color-grey-bg-light, $color-grey-bg-dark);
     height: 100vh;
 }
+
+.login-form {
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    height: auto;
+    position: relative;
+    background-color: inherit;
+
+    &__form {
+        width: 460px;
+        padding: 6rem;
+    }
+
+    & > * {
+        box-shadow: none;
+    }
+
+}
