@@ -62,7 +62,10 @@ body {
   margin-bottom: 4rem; }
 
 .u-margin-bottom-small {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 2rem; }
+
+.u-margin-top-small {
+  margin-top: 3rem; }
 
 .u-margin-top-large {
   margin-top: 8rem; }
@@ -72,6 +75,15 @@ body {
 
 .u-margin-top-huge {
   margin-top: 10rem; }
+
+.right-justified {
+  float: right; }
+
+.u-margin-left_medium {
+  margin-left: 6rem; }
+
+.orange-bg {
+  background-color: #ffaa55; }
 
 .text-logo {
   font-size: 5rem;
@@ -112,7 +124,7 @@ body {
   border-radius: 3px;
   display: block;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  height: 50vh;
+  height: 37.5rem;
   position: relative;
   width: 60%;
   left: 50%;
@@ -126,33 +138,78 @@ body {
 
 .alert {
   position: relative;
-  width: 100%;
-  height: 20vh;
+  height: 15rem;
   font-size: 1.6rem;
+  margin-top: 2.5rem;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #efe4b0;
+  padding-top: 2rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   background-color: #212121; }
+  @media (max-width: 56.25em) {
+    .alert {
+      width: 90%; } }
+  .alert > * {
+    box-shadow: none; }
   .alert--info {
+    padding-left: 3rem;
     color: #0d993a; }
   .alert--danger {
+    padding-left: 3rem;
     color: #852d36; }
+
+.anchor__darkorange {
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all .2s;
+  position: relative;
+  font-family: Ubuntu, sans-serif;
+  margin: 0;
+  color: darkorange;
+  text-decoration: underline;
+  cursor: pointer; }
+  .anchor__darkorange__big {
+    font-size: 1.6rem;
+    padding: 1.2rem 2rem; }
+  .anchor__darkorange__medium {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    padding: 1.2rem 2rem;
+    margin-left: -1.2rem; }
+  .anchor__darkorange:link, .anchor__darkorange:visited {
+    color: darkorange;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .2s; }
+  .anchor__darkorange:hover, .anchor__darkorange:active {
+    color: white;
+    background-color: darkorange;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: rotate(5deg) scale(1.3);
+    text-decoration: none; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 10rem;
   transition: all .2s;
   position: relative;
-  font-size: 1.6rem;
+  font-size: 1.6rem !important;
+  font-family: Ubuntu, sans-serif !important;
+  box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 1.5rem 4rem !important;
   border: none;
   cursor: pointer; }
 
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-  .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0; }
 
 .btn:active, .btn:focus {
   outline: none;
@@ -171,18 +228,6 @@ body {
   .btn--green::after {
     background-color: #55c57a; }
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .4s; }
-
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
@@ -192,20 +237,20 @@ body {
 
 .form__input {
   font-size: 1.5rem;
-  font-family: inherit;
+  font-family: Ubuntu, sans-serif !important;
   color: inherit;
   padding: 1.5rem 2rem;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
   border-bottom: 3px solid transparent;
-  width: 100%;
+  width: 90%;
   display: block;
   transition: all .3s; }
   @media (max-width: 56.25em) {
     .form__input {
       padding-left: 0;
-      width: 100%; } }
+      width: 95%; } }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -272,13 +317,19 @@ body {
 
 .form-essence {
   padding-top: 3rem;
-  width: 500px;
+  width: 550px;
   left: 50%;
   transform: translateX(-50%);
   position: relative; }
+  @media (max-width: 75em) {
+    .form-essence {
+      width: 70%; } }
   @media (max-width: 56.25em) {
     .form-essence {
-      width: 80%; } }
+      width: 75%; } }
+  @media (max-width: 37.5em) {
+    .form-essence {
+      width: 85%; } }
 
 .row {
   max-width: 114rem;

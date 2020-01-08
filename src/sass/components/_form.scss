@@ -5,20 +5,22 @@
 
     &__input {
         font-size: 1.5rem;
-        font-family: inherit;
+        font-family: Ubuntu, sans-serif !important;
         color: inherit;
         padding: 1.5rem 2rem;
         border-radius: 2px;
         background-color: rgba($color-white, .5);
         border: none;
         border-bottom: 3px solid transparent;
-        width: 100%;
+        width: 90%;
         display: block;
         transition: all .3s;
+        // box-sizing: border-box !important;
+        // -moz-box-sizing: border-box !important;
 
         @include respond(tab-port) {
             padding-left: 0;
-            width: 100%;
+            width: 95%;
         }
 
         &:focus {
@@ -106,12 +108,20 @@
 
 .form-essence {
     padding-top: 3rem;
-    width: 500px;
+    width: 550px;
     left: 50%;
     transform: translateX(-50%);
     position: relative;
 
+    @include respond(tab-land) {
+        width: 70%;
+    }
+
     @include respond(tab-port) {
-        width: 80%;
+        width: 75%;
+    }
+
+    @include respond(phone) {
+        width: 85%;
     }
 }
