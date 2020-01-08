@@ -136,6 +136,23 @@ body {
   .login-form > * {
     box-shadow: none; }
 
+.signup-form {
+  content: "";
+  border-radius: 3px;
+  display: block;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  height: 55.5rem;
+  position: relative;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #efe4b0; }
+  @media (max-width: 56.25em) {
+    .signup-form {
+      width: 90%; } }
+  .signup-form > * {
+    box-shadow: none; }
+
 .alert {
   position: relative;
   height: 15rem;
