@@ -62,10 +62,7 @@ body {
   margin-bottom: 4rem; }
 
 .u-margin-bottom-small {
-  margin-bottom: 2rem; }
-
-.u-margin-top-small {
-  margin-top: 3rem; }
+  margin-bottom: 1.5rem; }
 
 .u-margin-top-large {
   margin-top: 8rem; }
@@ -75,15 +72,6 @@ body {
 
 .u-margin-top-huge {
   margin-top: 10rem; }
-
-.right-justified {
-  float: right; }
-
-.u-margin-left_medium {
-  margin-left: 6rem; }
-
-.orange-bg {
-  background-color: #ffaa55; }
 
 .text-logo {
   font-size: 5rem;

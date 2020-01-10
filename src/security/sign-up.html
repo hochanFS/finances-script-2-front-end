@@ -63,24 +63,22 @@
         </div>
     </div>
 </main>
-<div>
-    <div>
-        <h3>New User Registration</h3>
-        <form autocomplete="off" action="#" th:action="@{/register}"
-              th:object="${member}" method="post" role="form"
-              data-toggle="validator">
-            <div th:if="${#fields.hasErrors('username')}" th:errors="*{username}"
-                 class="validation-message alert alert-danger" role="alert"></div>
-            <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
-                 class="validation-message alert alert-danger" role="alert"></div>
-            <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
-                 class="validation-message alert alert-danger" role="alert"></div>
-            <div th:if="${#fields.hasErrors('matchingPassword')}" th:errors="*{matchingPassword}"
-                 class="validation-message alert alert-danger" role="alert"></div>
-            <div th:if="${signUpError != null}" th:text="${signUpError}"></div>
-
-        </form>
+<div th:if="${#fields.hasErrors('*')}" class="alert">
+    <div th:if="${#fields.hasErrors('username')}" th:errors="*{username}"
+         class="alert--danger" role="alert">
+    </div>
+    <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+         class="alert--danger" role="alert">
+    </div>
+    <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+         class="alert--danger" role="alert">
+    </div>
+    <div th:if="${#fields.hasErrors('matchingPassword')}" th:errors="*{matchingPassword}"
+         class="alert--danger" role="alert">
+    </div>
+    <div th:if="${signUpError != null}" th:text="${signUpError}">
     </div>
 </div>
+
 </body>
 </html>
