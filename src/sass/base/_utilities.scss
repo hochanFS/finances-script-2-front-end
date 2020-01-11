@@ -41,7 +41,7 @@
 }
 
 .u-padding-small-btn {
-    padding: 1.0rem 4rem !important;
+    padding: 0.9rem 4rem !important;
 }
 
 .u-margin-top-huge-px {
@@ -60,3 +60,21 @@
     margin-top: -12px;
 }
 
+.responsive__margin {
+    content: "";
+    border-radius: 3px;
+    display: block;
+    height: 100%;
+    position: relative;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include respond(tab-port) {
+        width: 90%;
+    }
+
+    @include respond(phone) {
+        width: 100%;
+    } 
+}

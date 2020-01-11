@@ -38,4 +38,15 @@
     }
 }
 
+.dynamic--pading__right {
+    padding-right: 12.5rem;
+    @include respond(tab-port) {
+        padding-right: 7rem;
+    }
+
+    @include respond(phone) {
+        padding-right: 1rem;
+    }
+}
+
 // .row:not()

@@ -1,0 +1,87 @@
+.navigation {
+    background-color: $navigation-bar-color;
+    height: 3rem;
+
+    &__wrapper {
+        display: inline-block;
+        height: 100%;
+
+        @include respond(tab-port) {
+            width: 100%;    
+        }
+    }
+
+    &__item {
+        float: left;
+        width: 17rem;
+        vertical-align: middle;
+        overflow: hidden;
+        height: 3rem;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        height: 3rem;
+    }
+
+    &__link--orange {
+        border-top: orange solid 1px;
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+        line-height: 3rem;
+        vertical-align: center;
+        overflow: hidden;
+
+        &:link,
+        &:visited {
+            color: white;
+            background-color: $navigation-bar-color;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all .2s;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        &:hover,
+        &:active {
+            background-color: orange;
+            color: black;
+            height: 100%;
+            vertical-align: middle;
+        }
+    }
+}
+
+
+// <footer class="footer">
+//             <div class="footer__logo-box">
+//                 <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+//             </div>
+//             <div class="row">
+//                 <div class="col-1-of-2">
+//                     <div class="footer__navigation">
+//                         <ul class="footer__list">
+                            
+//                             <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+//                             <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+//                             <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
+//                             <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+//                             <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//                 <div class="col-1-of-2">
+//                     <p class="footer__copyright">
+//                         Built my <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course. Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to use this webpage for both personal and commerical use, but NOT to claim it as your own design. A credit to the original author is of course highly appreciated.
+//                     </p>
+//                 </div>
+//             </div>
+//         </footer>
