@@ -13,7 +13,7 @@
         box-sizing: border-box !important;
         -moz-box-sizing: border-box !important;
         margin: 0 !important;
-        padding: 1.5rem 4rem !important;
+        padding: 1.5rem 4rem;
 
         //Change for the <button> element
         border: none;
@@ -47,6 +47,15 @@
 
         &::after {
             background-color: $color-primary;
+        }
+    }
+
+    &--orange {
+        background-color: rgb(153, 51, 62);
+        color: $color-white;
+
+        &::after {
+            background-color: rgb(153, 51, 62);
         }
     }
     
