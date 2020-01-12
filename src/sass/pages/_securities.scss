@@ -38,6 +38,28 @@ body {
 
 }
 
+.login-form {
+    content: "";
+    border-radius: 3px;
+    display: block;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    height: 42rem;
+    position: relative;
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $color-lemon;
+
+    @include respond(tab-port) {
+        width: 90%;
+    }
+
+    & > * {
+        box-shadow: none;
+    }
+
+}
+
 .signup-form {
     content: "";
     border-radius: 3px;

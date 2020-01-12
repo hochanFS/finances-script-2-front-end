@@ -137,9 +137,9 @@
         margin: 2rem;
     }
 
-    @include respond(notphone) {
-        display: none;
-        height: 0;
-        width: 0;
-    }
+    // @include respond(notphone) {
+    //     display: none;
+    //     height: 0;
+    //     width: 0;
+    // }
 }
