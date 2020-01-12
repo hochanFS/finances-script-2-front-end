@@ -17,19 +17,6 @@
         }
     }
 
-    // &__pwrapper {
-    //     display: none;
-    //     cursor: default;
-
-    //     @include respond(phone) {
-    //         cursor: pointer;
-    //         display: inline-block;
-    //         width: 100%;
-    //         height: 100%;
-    //         cursor: pointer;
-    //     }
-    // }
-
     &__item {
         float: left;
         width: 17rem;
@@ -87,40 +74,4 @@
         }
     }
 
-    // &__phone {
-    //     display: none;
-    //     position: relative;
-
-    //     @include respond(phone) {
-    //         display: inline-block;
-    //         position: absolute;
-    //         width: 25px;
-    //         top: 50%;
-    //         left: 90%;
-    //         transform: translate(-50%, -50%);
-    //     }
-
-    //     &--line1, &--line2, &--line3 {
-    //         display: none;
-
-    //         @include respond(phone) {
-    //             display: block;
-    //             width: 25px;
-    //             height: 2px;
-    //             background-color: white;
-    //             margin: 4px;
-    //         }
-    //     }
-
-    //     &--active {
-    //         display: none;
-
-    //         @include respond(phone) {
-    //             background-color: $navigation-bar-color;
-    //             height: 95vh;
-    //             position: fixed;
-
-    //         }
-    //     }
-    // }
 }
