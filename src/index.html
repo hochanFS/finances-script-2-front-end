@@ -41,24 +41,38 @@
             </div>
         </div>
     </div>
+   
     <nav th:fragment="navigation" class="navigation">
         <div class="responsive__margin">
             <div class="navigation__wrapper">
                 <ul class="navigation__list">
-                    <li class = "navigation__item"><a href="#" class="navigation__link navigation__link--orange">About</a></li>
+                    <li class = "navigation__item"><a href="#" class="navigation__link navigation__link--orange">About Us</a></li>
                     <li class = "navigation__item"><a href="#" class="navigation__link navigation__link--orange">Simulations</a></li>
                     <li class = "navigation__item"><a href="#" class="navigation__link navigation__link--orange">Machine Learning</a></li>
                     <li class = "navigation__item"><a href="#" class="navigation__link navigation__link--orange">Equity Research</a></li>
-                    <li class = "navigation__item"><a href="#" class="navigation__link navigation__link--orange">Contact Us</a></li>
                 </ul>
             </div>
         </div>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
     </nav>
+
+    <div class="phone-nav">
+        <input type = "checkbox" class="phone-nav__checkbox" id="navi-toggle">
+        <label for = "navi-toggle" class="phone-nav__button">
+            <span class="phone-nav__icon">&nbsp;</span>
+        </label>
+        <div class="phone-nav__background">&nbsp;</div>
+        <div class="phone-nav__nav">
+            <ul class="phone-nav__list">
+                <li class = "phone_nav__item"><a href="#" class="phone-nav__link phone-nav__link--orange">About Us</a></li>
+                <li class = "phone_nav__item"><a href="#" class="phone-nav__link phone-nav__link--orange">Simulations</a></li>
+                <li class = "phone_nav__item"><a href="#" class="phone-nav__link phone-nav__link--orange">Machine Learning</a></li>
+                <li class = "phone_nav__item"><a href="#" class="phone-nav__link phone-nav__link--orange">Equity Research</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    
     <!-- footer thymeleaf -->
     <div th:replace="fragments/header_fg :: navigation">Navigation bar goes here</div>
     <!-- -->

@@ -12,6 +12,13 @@
             @content
         };
     }
+
+    @if $breakpoint == notphone {
+        @media (min-width: 37.5625em) { // 601px
+            @content
+        };
+    }
+
     @if $breakpoint == tab-port {
         @media (max-width: 56.25em) { // 900px
             @content
