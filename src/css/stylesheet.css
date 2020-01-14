@@ -403,6 +403,45 @@ body {
     .form-essence {
       width: 85%; } }
 
+table {
+  width: 100%;
+  max-width: 1200px;
+  font-size: 1.6rem;
+  border-collapse: collapse; }
+  table thead {
+    background-color: #333;
+    color: white;
+    text-align: left; }
+  table tr {
+    display: table-row;
+    text-decoration: none;
+    line-height: 4.2rem;
+    padding-top: auto;
+    border-bottom: 1px black solid;
+    text-align: left; }
+    table tr:last-child {
+      border-bottom: none; }
+    table tr:not(.theadrow):hover {
+      background-color: #efe4b0; }
+  table td {
+    text-align: left;
+    padding-left: 1.5rem;
+    border-bottom: thin #333 2px; }
+    table td a {
+      width: 100%;
+      text-decoration: none;
+      color: black;
+      display: block; }
+      table td a:hover {
+        text-decoration: underline; }
+  table th {
+    padding-left: 1.5rem; }
+
+.mainsection {
+  margin-top: 5vh;
+  min-height: 64vh;
+  margin-bottom: 5vh; }
+
 .main--header {
   height: 10.7rem;
   min-height: 7vh;
