@@ -113,6 +113,13 @@ body {
     .responsive__margin {
       width: 100%; } }
 
+.u-text-center {
+  text-align: center;
+  display: block;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%; }
+
 .text-logo {
   font-size: 5rem;
   text-align: center;
@@ -131,6 +138,16 @@ body {
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
     font-family: IBM Plex Mono, sans-serif; }
+  .text-logo--leftsimple {
+    font-size: 1.6rem;
+    display: inline-block;
+    color: #e19933;
+    font-family: sans-serif; }
+  .text-logo--rightsimple {
+    font-size: 1.6rem;
+    display: inline-block;
+    color: #0f0f0f;
+    font-family: sans-serif; }
 
 .main--body {
   background-image: #f0f0f0;
@@ -686,3 +703,17 @@ table {
 
 .phone-nav__item {
   margin: 2rem; }
+
+footer {
+  padding-top: 3rem;
+  border-top: #555555 thin solid;
+  font-family: sans-serif;
+  font-size: 1.6rem; }
+  footer a {
+    text-decoration: none; }
+    footer a :visited, footer a :active, footer a :hover {
+      color: black; }
+
+.copyright {
+  font-size: 1.6rem;
+  color: #555555; }

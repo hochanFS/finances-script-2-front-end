@@ -71,9 +71,36 @@
         </div>
     </div>
     </section>
+    <main class="mainsection">
+
+    </main>
+    <footer class="dynamic--margin" th:replace="fragments/footer_fg :: footer">
+        <div class="row">
+            <div class="col-1-of-3">
+            <span class="copyright">
+                &copy; </span><span class="text-logo--leftsimple">Finance</span><span class="text-logo--rightsimple"><i>script</i></span>
+                <span class="copyright" th:text="${2020}"}>&nbsp; 2020 - All Rights Reserved</span>
+            </div>
+            <div class="col-1-of-3">
+                <div class="footer--nav">
+                    <ul class="footer--ul">
+                        <li class="footer-li"><a th:href="@{/termsOfUse}"></a>Terms of use</li>
+                        <li><a th:href="@{/advertisement}"></a>Advertisement</li>
+                        <li><a th:href="@{/contactUs}"></a>Contact us</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-3">
+                <div class="footer--social-media">
+                    
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- footer thymeleaf TODO: fix th:text-->
     
-    <!-- footer thymeleaf -->
-    <div th:replace="fragments/header_fg :: navigation">Navigation bar goes here</div>
     <!-- -->
 </body>
 

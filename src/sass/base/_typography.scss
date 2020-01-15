@@ -21,4 +21,19 @@
         animation-timing-function: ease-out;
         font-family: IBM Plex Mono, sans-serif;
     }
+
+    &--leftsimple {
+        font-size: 1.6rem;
+        display: inline-block;
+        color: $color-logo-left;
+        font-family: sans-serif;
+    }
+
+    
+    &--rightsimple {
+        font-size: 1.6rem;
+        display: inline-block;
+        color:  $color-logo-right;
+        font-family: sans-serif;
+    }
 }
