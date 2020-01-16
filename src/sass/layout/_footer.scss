@@ -1,19 +1,66 @@
-footer {
+.footer {
     padding-top: 3rem;
     border-top: #555555 thin solid;
     font-family: sans-serif;
     font-size: 1.6rem;
+    height: 3.5rem !important;
 
-    a {
+    &--ul {
         text-decoration: none;
+    }
 
-        :visited, :active, :hover {
-            color: black;
+    &--li {
+        list-style: none;
+        display: inline-block;
+        min-width: 140px;
+    }
+
+    &--link {
+        color: orange;
+    }
+
+    &--social-media {
+        height: 1.6rem;
+        width: 1.5rem;
+        float: right;
+    }
+
+    &--sociallogo {
+        float: right;
+        
+        &--img {
+            height: 3rem;
+            width: 3rem;
+            margin-left: .5rem;
+            filter: brightness(0.9);
+
+            &:hover {
+                filter: brightness(1.5);
+            }
+        }
+
+    }
+
+    &--nav {
+        width: 290px;
+        display: block;
+        
+        @include respond(tab-port) {
+            margin: auto;
+            text-align: center;
         }
     }
 }
 
 .copyright {
+    float: right;
     font-size: 1.6rem;
     color: #555555;
+    
+    @include respond(tab-port) {
+        float: none;
+        display: block !important;
+        height: 3.5rem !important;
+        text-align: center;
+    }
 }
