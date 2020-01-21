@@ -77,6 +77,17 @@
 
     <main class="mainsection">
     <div class="responsive__margin">
+        <div class="search">
+            <div class = "row">
+                <form th:object="${article}" th:action="@{/articles}" method="get" class="search__form">
+                    <input th:field="*{title}" placeholder="Search by title" class = "search__input"/>
+                    <button type="submit" class="search__submit">
+                        Search
+                    </button>
+                    <a th:href="@{/articles/new}" class="btn btn--green u-padding-very-small-btn">New</a>
+                </form>
+            </div>
+        </div>
         <table>
             <thead>
             <tr class="theadrow">

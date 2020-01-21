@@ -43,6 +43,11 @@
     &--img {
         width: 8.9rem;
         height: 8.7rem;
+
+        @include respond(xs) {
+            width: 5rem;
+            height: 5rem;
+        }
     }
 }
 
