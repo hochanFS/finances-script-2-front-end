@@ -19,7 +19,7 @@
 <head th:replace="fragments/info_fg :: metainfo ('FinanceScript 2.0')"> 
 </head>
 -->
-<body class="main--body">
+<body class="main--body"  onload="init();">
     <!-- <div th:replace="fragments/header_fg :: social_media">Social media header goes here</div>
     <div th:replace="fragments/header_fg :: navigation">Navigation bar goes here</div> -->
     <div th:fragment="social_media" class="main--header">
@@ -121,6 +121,24 @@
                 </article>
             </div>
         </div>
+
+        <div class="form-comments">
+            <!--/*@thymesVar id="comment" type="com.financescript.springapp.domains.Comment"*/-->
+            <form th:object="${comment}" th:action="@{'/articles/' + ${article.getId()} + '/comment'}" method="post">
+                <div class="row">
+                    <input type="hidden" th:field="*{id}"/>
+                    <textarea rows="1" class="form-comments__input" th:field="*{contents}" th:errorclass="has-error"
+                    id="text" placeholder="Write a comment"></textarea>
+                </div>
+                <script src="../js/comment-text.js">
+                    
+                </script>
+                <div class="row">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+
         <div class="comments" th:each="comment: ${article.comments}">
             <div class="comment-viewer">
                 <div class="row">
@@ -150,8 +168,10 @@
             </div>
         </div>
         <script type="text/javascript" src="https://pagecdn.io/lib/ace/1.4.7/ace.js"></script>
+
         <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="../js/codeformat.js" th:src="@{/js/codeformat.js}"></script>
+        
     </div>
 </main>
 

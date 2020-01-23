@@ -1,11 +1,13 @@
 .article {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin: 3rem auto;
     display: block;
-    max-width: 1400px;
+    max-width: 1360px;
+    width: 100%;
     min-height: 500px;
     background-color: $color-lemon;
-    padding: 2rem;
+    padding: 20px;
+    overflow: hidden;
 
 
     pre {

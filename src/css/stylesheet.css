@@ -379,6 +379,26 @@ body {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
 
+.form-comments {
+  font-size: 1.6rem;
+  margin: 3rem auto;
+  display: block;
+  max-width: 1390px;
+  width: 100%; }
+  .form-comments__input {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 1.6rem;
+    resize: none;
+    padding-left: 10px; }
+    .form-comments__input:focus {
+      border: none;
+      outline: none;
+      border-bottom: 3px solid black; }
+
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
 
@@ -512,13 +532,15 @@ table {
     padding-left: 1.5rem; }
 
 .article {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin: 3rem auto;
   display: block;
-  max-width: 1400px;
+  max-width: 1360px;
+  width: 100%;
   min-height: 500px;
   background-color: #efe4b0;
-  padding: 2rem; }
+  padding: 20px;
+  overflow: hidden; }
   .article pre {
     max-width: 1000px;
     display: block;
