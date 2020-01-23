@@ -3,11 +3,9 @@
     margin: 3rem auto;
     display: block;
     max-width: 1360px;
-    width: 100%;
     min-height: 500px;
     background-color: $color-lemon;
     padding: 20px;
-    overflow: hidden;
 
 
     pre {
@@ -17,9 +15,11 @@
         
     }
 
-    code {
+    &-code {
         color: white;
         background-color: rgb(40, 42, 54);
+        font: Consolas, Courier, monospace;
+        display: inline-block;
     }
 
     &--title {
