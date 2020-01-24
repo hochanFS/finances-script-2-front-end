@@ -398,6 +398,9 @@ body {
       border: none;
       outline: none;
       border-bottom: 3px solid black; }
+  .form-comments--update {
+    display: none;
+    margin: 3rem 3rem; }
 
 .comment {
   font-size: 1.6rem;

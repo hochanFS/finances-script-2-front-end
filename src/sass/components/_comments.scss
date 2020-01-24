@@ -21,6 +21,11 @@
             border-bottom: 3px solid black;
         }
     }
+
+    &--update {
+        display: none;
+        margin: 3rem 3rem;
+    }
 }
 
 .comment {
