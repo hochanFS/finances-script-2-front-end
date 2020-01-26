@@ -399,7 +399,6 @@ body {
       outline: none;
       border-bottom: 3px solid black; }
   .form-comments--update {
-    display: none;
     margin: 3rem 3rem; }
 
 .comment {
