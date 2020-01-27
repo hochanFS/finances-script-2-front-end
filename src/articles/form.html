@@ -72,26 +72,79 @@
         </div>
     </div>
 </section>
-<main class = "mai">
-    <form th:object="${article}" th:action="@{/articles/new}" method="post">
-        <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
-            <p>Failed to save the article:</p>
-        </div>
-        <div class="pannel-group">
-            <div class="row">
-                <label>Title</label>
-                <input type="text" class="form-control" th:field="*{title}" th:errorclass="has-error" />
-            </div>
-            <div class="option">
 
-            </div>
-            <div class="row">
-                <textarea style="width:60rem; height:60vh; white-space: pre-line;" class="large-input" th:field="*{contents}" th:errorclass="has-error">
-                </textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-    </form>
+<!-- Beginning of copy section -->
+
+<main class="mainsection"  >
+    <div class="responsive__margin" >
+
+            <form th:action="@{/articles/new}" th:object="${article}" method="post">
+                <div class="article">
+                <div class="pannel-group">
+                    <input type="hidden" th:field="*{id}"/>
+                    <div class="row u-margin-bottom-small">
+                        <label class="article--label col-1-of-4">Title:</label>
+                        <input type="text" class="article--input col-3-of-4" th:field="*{title}" th:errorclass="has-error" placeholder="The title of your article"/>
+                    </div>
+                    <div class="row u-margin-bottom-small">
+                        <label class="article--label col-1-of-4">Context:</label>
+                        <textarea class="article--textArea col-3-of-4" th:field="*{originalText}" th:errorclass="has-error" name="content" id="content"
+                                  placeholder="The content can be written as if you are writing an .md file. Some features (e.g. &lt;form&gt;) is not supported for security reason"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="article--center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger" style="width: 1400px; max-width: 100%;">
+                    <div class="alert--danger">
+                        Unable to create the article:
+                    </div>
+                    <div th:if="${#fields.hasErrors('title')}" >
+                        <p th:each="err : ${#fields.errors('title')}" th:text="${err}"></p>
+                    </div>
+                </div>
+            </form>
+
+
+    </div>
 </main>
+
+
+<!-- End of copy section -->
+
+<footer class="footer dynamic--margin" th:replace="fragments/footer_fg :: footer">
+    <div class="row">
+        
+        <div class="col-1-of-3">
+            <div class="footer--nav">
+                <ul class="footer--ul">
+                    <li class="footer--li"><a class="anchor__darkorange__footer" href="#" th:href="@{/termsOfUse}">Terms of use</a></li>
+                    <li class="footer--li"><a class="anchor__darkorange__footer" href="#" th:href="@{/contactUs}">Contact us</a></li>
+                    <!-- <li class="footer--li"><a class="anchor__darkorange__footer" href="#" th:href="@{/corrections}">Corrections</a></li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="col-1-of-3 footer--social-media">
+            <div class="u--footer--img-center">
+            <a class="footer--sociallogo" href="https://www.linkedin.com/company/10085596" target="_blank"><img src="../img/linkedin.png" th:src="@{/img/linkedin.png}" alt="LinkedIn" class="footer--sociallogo--img"/></a>
+            <a class="footer--sociallogo" href="https://twitter.com/FinanceScript" target="_blank"><img src="../img/twitter.png" th:src="@{/img/twitter.png}" alt="Twitter" class="footer--sociallogo--img"/></a>
+            <a class="footer--sociallogo" href="https://www.youtube.com/channel/UCRnp8XmzrBDj-7WUgXbgmzw" target="_blank"><img src="../img/youtube.png" th:src="@{/img/youtube.png}" alt="Youtube" class="footer--sociallogo--img"/></a>
+            </div>
+        </div>
+        <div class="col-1-of-3">
+            <div class="footer--copyright">
+                <span class="copyright">
+                    &copy;<span class="text-logo--leftsimple">Finance</span><span class="text-logo--rightsimple"><i>script</i>&nbsp; </span>
+                    <span th:text="${2020}"}>2020</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
 </body>
 </html>
