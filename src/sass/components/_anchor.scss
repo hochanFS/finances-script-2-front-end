@@ -51,6 +51,27 @@
             text-decoration: none;
         }
     }
+
+    &__misc {
+        font-size: 1.5rem;
+        padding: 0;
+        text-decoration: underline;
+
+        &:link,
+        &:visited {
+            color: darkorange;
+            text-decoration: underline;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-white;
+            background-color: darkorange;
+            text-decoration: none;
+        }
+    }
     
     
     &:link,
