@@ -1,7 +1,7 @@
 .navigation {
     background-color: $navigation-bar-color;
     height: 3rem;
-    min-height: 2.75vh;
+    min-height: 1.75vh;
 
     @include respond(phone) {
         display: none;
@@ -23,7 +23,7 @@
         vertical-align: middle;
         overflow: hidden;
         height: 3rem;
-        min-height: 2.75vh;
+        min-height: 1.75vh;
         position: relative;
 
         &:not(:last-child) {

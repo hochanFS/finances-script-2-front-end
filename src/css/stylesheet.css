@@ -602,37 +602,80 @@ body {
     .form-essence {
       width: 85%; } }
 
-table {
+.table {
   width: 100%;
   font-size: 1.6rem;
   border-collapse: collapse; }
-  table thead {
+  .table thead {
     background-color: #333;
     color: white;
     text-align: left; }
-  table tr {
+  .table tr {
     display: table-row;
     text-decoration: none;
     line-height: 4.2rem;
     padding-top: auto;
     border-bottom: 1px black solid;
     text-align: left; }
-    table tr:last-child {
+    .table tr:last-child {
       border-bottom: none; }
-    table tr:not(.theadrow):hover {
+    .table tr:not(.theadrow):hover {
       background-color: #efe4b0; }
-  table td {
+  .table td {
     text-align: left;
     padding-left: 1.5rem;
     border-bottom: thin #333 2px; }
-    table td a {
+    .table td a {
       width: 100%;
       text-decoration: none;
       color: black;
       display: block; }
-      table td a:hover {
+      .table td a:hover {
         text-decoration: underline; }
-  table th {
+  .table th {
+    padding-left: 1.5rem; }
+
+.sectorscreen {
+  width: 100%;
+  font-size: 1.5rem;
+  border-collapse: collapse;
+  background-color: #e7e7e7;
+  border-radius: 5px;
+  overflow: hidden; }
+  .sectorscreen tr {
+    display: table-row;
+    text-decoration: none;
+    line-height: 3rem;
+    padding-top: auto;
+    text-align: left; }
+    .sectorscreen tr:last-child {
+      border-bottom: none; }
+  .sectorscreen td {
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: thin #333 2px; }
+    .sectorscreen td .card--green {
+      display: block;
+      text-align: center;
+      margin-top: 2px;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 2px;
+      overflow: hidden;
+      background-color: #33a25a;
+      color: white; }
+    .sectorscreen td .card--red {
+      background-color: #852d36;
+      display: block;
+      text-align: center;
+      margin-top: 2px;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 2px;
+      overflow: hidden;
+      color: white; }
+  .sectorscreen th {
     padding-left: 1.5rem; }
 
 .article {
@@ -842,7 +885,7 @@ table {
 .navigation {
   background-color: #3c3c3c;
   height: 3rem;
-  min-height: 2.75vh; }
+  min-height: 1.75vh; }
   @media (max-width: 37.5em) {
     .navigation {
       display: none;
@@ -859,7 +902,7 @@ table {
     vertical-align: middle;
     overflow: hidden;
     height: 3rem;
-    min-height: 2.75vh;
+    min-height: 1.75vh;
     position: relative; }
     .navigation__item:not(:last-child) {
       margin-right: 1.5rem; }
