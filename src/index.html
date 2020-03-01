@@ -72,10 +72,43 @@
     </div>
     </section>
     <main class="mainsection">
+        
         <div class="responsive__margin">
+            <div class="row">
+                <div class="feed" style="height: 20rem; margin: 5rem 0; background-color: aliceblue;">
+                    <h1>
+                        Welcome to FinanceScript 2.0 Alpha Version
+                    </h1>
+                    <p>
+                        <i>This website is created with <b>Java</b> and <b>Spring Framework</b> by 
+                            <a class="feed--a" href="https://www.linkedin.com/in/hochanlee/" target="_blank">Hochan Lee</a>, an Actuary at Numerix. Please contact <a class="feed--a" href="mailto:nyhochan.lee@gmail.com">nyhochan.lee@gmail.com</a> for his resume.</i>                            
+                    </p>
+                    <br>
+                    <ul>
+                        <li>01/01/2020: <a class="feed--a">Equity Research</a> page is available! </li>
+                        <li>01/16/2020: <a class="feed--a">Equity Research</a> now supports user's comments.</li>
+                        <li>02/01/2020: <a class="feed--a">Forgot my Passsword</a> is now functional and will send an email to you!</li>
+                        <li>03/01/2020: Index page (this page) shows the market data and earnings report. Alpha version is deployed with AWS!</li>
+                        <li>05/30/2020*: Plans to release Simulation feature. Partial development progress is available <a class="feed--a" href="https://github.com/hochanFS/AAA-ESG"  target="_blank">here</a>.</li>
+                    </ul>
+                    <p>
+                        Your feedback is always welcome. For bugs or suggestions, please create an issue at public GitHub <a href="https://github.com/hochanFS/financescript-2" target="_blank" class="feed--a">repository</a>.
+                    </p>
+                    
+                </div>
+            </div>
         <div class="row">
             <div class="col-1-of-3">
                 <div class="market--rest">
+                    <!-- <table class="sectorscreen">
+                        <tr th:each="i: ${#numbers.sequence(0, 8)}">
+                            <td style="width: 60%;" th:text="${sectorTitles[i]}">Discretionary</td>
+                            <td><span th:text="${sectorReturns[i]}" th:class="${sectorReturns[i].startsWith('-')}? 'card--red' : 'card--green'">1.02%</span></td>
+                        </tr>
+                    </table> -->
+                    <h1>
+                        Sector Performances
+                    </h1>
                     <table class="sectorscreen">
                         <tr>
                             <td style="width: 60%;">Discretionary</td>
@@ -114,6 +147,59 @@
                             <td><span class="card--green">1.50%</span></td>
                         </tr>
                     </table>
+                </div>
+            </div>
+            <div class="col-2-of-3">
+                <div class="feed">
+                    <h1>Earnings Reports</h1>
+                    <ul>
+                        <li>
+                            <a href="http://www.mylan.com" target="_blank"  class="feed--a">MYL</a> (Mylan N.V.) reports FQ4 earnings of $1.40 EPS and $3.19B Revs
+                        </li>
+                        <li>
+                            <a href="http://www.mylan.com" target="_blank"  class="feed--a">MYL</a> (Mylan N.V.) reports FQ4 earnings of $1.40 EPS and $3.19B Revs
+                        </li>
+                        <li>
+                            <a href="http://www.mylan.com" target="_blank"  class="feed--a">MYL</a> (Mylan N.V.) reports FQ4 earnings of $1.40 EPS and $3.19B Revs
+                        </li>
+                        <li>
+                            <a href="http://www.mylan.com" target="_blank"  class="feed--a">MYL</a> (Mylan N.V.) reports FQ4 earnings of $1.40 EPS and $3.19B Revs
+                        </li>
+                        <li>
+                            <a href="http://www.mylan.com" target="_blank"  class="feed--a">MYL</a> (Mylan N.V.) reports FQ4 earnings of $1.40 EPS and $3.19B Revs
+                        </li>
+                        <li>
+                            <a href="http://www.mylan.com" target="_blank"  class="feed--a">MYL</a> (Mylan N.V.) reports FQ4 earnings of $1.40 EPS and $3.19B Revs
+                        </li>
+                        <li>
+                            <a href="http://www.mylan.com" target="_blank"  class="feed--a">MYL</a> (Mylan N.V.) reports FQ4 earnings of $1.40 EPS and $3.19B Revs
+                        </li>
+                        
+                        <li>
+                            <a href="http://www.mylan.com" target="_blank"  class="feed--a">MYL</a> (Mylan N.V.) reports FQ4 earnings of $1.40 EPS and $3.19B Revs
+                        </li>
+                        <li>
+                            <a href="http://www.mylan.com" target="_blank"  class="feed--a">MYL</a> (Mylan N.V.) reports FQ4 earnings of $1.40 EPS and $3.19B Revs
+                        </li>
+                        <li>
+                            <a href="http://www.mylan.com" target="_blank"  class="feed--a">MYL</a> (Mylan N.V.) reports FQ4 earnings of $1.40 EPS and $3.19B Revs
+                        </li>
+                        <li>
+                            <a href="http://www.mylan.com" target="_blank"  class="feed--a">MYL</a> (Mylan N.V.) reports FQ4 earnings of $1.40 EPS and $3.19B Revs
+                        </li>
+                        
+                        <li>
+                            <a href="http://www.mylan.com" target="_blank"  class="feed--a">MYL</a> (Mylan N.V.) reports FQ4 earnings of $1.40 EPS and $3.19B Revs
+                        </li>
+                        <li>
+                            <a href="http://www.mylan.com" target="_blank"  class="feed--a">MYL</a> (Mylan N.V.) reports FQ4 earnings of $1.40 EPS and $3.19B Revs
+                        </li>
+                        <li>
+                            <a href="http://www.mylan.com" target="_blank"  class="feed--a">MYL</a> (Mylan N.V.) reports FQ4 earnings of $1.40 EPS and $3.19B Revs
+                        </li> 
+                        
+
+                    </ul>
                 </div>
             </div>
         </div>
