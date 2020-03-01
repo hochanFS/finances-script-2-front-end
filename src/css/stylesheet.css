@@ -163,7 +163,7 @@ body {
   height: 100vh; }
 
 .market--rest {
-  height: 37rem;
+  height: 37.5rem;
   padding: 2rem;
   background-color: #e7e7e7;
   border-radius: 5px;
@@ -174,7 +174,7 @@ body {
     margin-bottom: 1rem; }
 
 .feed {
-  height: 37rem;
+  height: 37.5rem;
   padding: 2rem;
   background-color: #efe4b0;
   border-radius: 5px;
