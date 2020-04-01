@@ -799,7 +799,8 @@ body {
       border-bottom: 3px solid #55c57a; }
     @media (max-width: 56.25em) {
       .search__input {
-        width: 100%; } }
+        width: 80%;
+        display: block; } }
   .search__submit {
     margin-left: 1rem;
     height: 3.7rem;
